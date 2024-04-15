@@ -18,7 +18,7 @@ public class Main {
         System.out.println("Array with someElement in the third position:");
         System.out.println(myArrayList);
 
-        MyArrayList newTypeList = new MyArrayList(myArrayList);
+        MyArrayList<String> newTypeList = new MyArrayList<>(myArrayList);
 
         System.out.println("Collection from constructor with another collection");
         System.out.println(newTypeList);
@@ -35,5 +35,6 @@ public class Main {
         MyArrayList.bubbleSort(myArrayList);
         System.out.println("Sorted array:");
         System.out.println(myArrayList);
+
     }
 }

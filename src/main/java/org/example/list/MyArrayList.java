@@ -12,7 +12,7 @@ public class MyArrayList<T extends Comparable<T>> implements MyList<T> {
         this.elementData = (T[]) new Comparable[CAPACITY];
     }
 
-    public MyArrayList(MyArrayList<T> collection) {
+    public MyArrayList(MyArrayList<? extends T> collection) {
         this.elementData = (T[]) new Comparable[(int) (collection.size * GROW_FACTOR + 1)];
         for (int i = 0; i < collection.size; i++) {
             this.elementData[i] = collection.get(i);
@@ -128,7 +128,7 @@ public class MyArrayList<T extends Comparable<T>> implements MyList<T> {
         }
     }
 
-    static public void bubbleSort(MyArrayList collection) {
+    static public void bubbleSort(MyArrayList<?> collection) {
         collection.bubbleSort();
     }
 }
